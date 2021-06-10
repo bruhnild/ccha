@@ -132,12 +132,23 @@ map.addLayer({
 
 
 //Interactivité CLICK
+var markerHeight = 50, markerRadius = 10, linearOffset = 25;
+var popupOffsets = {
+'top': [0, 0],
+'top-left': [0,0],
+'top-right': [0,0],
+'bottom': [0, -markerHeight],
+'bottom-left': [linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+'bottom-right': [-linearOffset, (markerHeight - markerRadius + linearOffset) * -1],
+'left': [markerRadius, (markerHeight - markerRadius) * -1],
+'right': [-markerRadius, (markerHeight - markerRadius) * -1]
+};
 
 map.on('click', 'Communes', function (e) {
-new mapboxgl.Popup()
+new mapboxgl.Popup({offset: popupOffsets, className: 'my-class'})
 .setLngLat(e.lngLat)
 .setHTML( '<h4><b><font size="4"> <div style="text-align: center;">' + e.features[0].properties.nom + ' ' + '(' + e.features[0].properties.code_insee + ')' +'</h4></b></font>'
-       + '<br>'+ '<img src="'+e.features[0].properties.url_photo +'" alt="Photo de la commune"' + e.features[0].properties.nom + 'width="350">' 
+       + '<br>'+ '<img src="'+e.features[0].properties.url_photo +'" alt="Photo de la commune"' + e.features[0].properties.nom + ' width="350">' 
      + '<br>'+ '<br>' + '<font size="3" style="color:#8ea7c5"><b> Caractéristiques</b></font>'
   
         + '<br>'+ '<br>' + '<font size="2" style="color:#636466"> Population (2018) : </font>' + '<font size="2">'+e.features[0].properties.pop_2018 +'</font>'
@@ -154,8 +165,11 @@ new mapboxgl.Popup()
     + '<br>'+'<font size="2" style="color:#636466"> Site internet : </font>' + '<font size="2">'+ e.features[0].properties.site_internet +'</font>'
       + '<br>'+'<font size="2" style="color:#636466"> Horaires d\'ouverture : </font>' + '<font size="2">'+  '<br>'+e.features[0].properties.horaires_ouverture +'</font>'
  )
+.setMaxWidth("300px")
 .addTo(map);
 });
+
+
 
 map.on('mousemove', function (e) {
 var features = map.queryRenderedFeatures(e.point, { layers: ['Communes'] });
