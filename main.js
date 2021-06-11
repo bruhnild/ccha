@@ -129,6 +129,8 @@ function addLayers() {
 
 
   //Interactivité HOVER
+   // When the user moves their mouse over the state-fill layer, we'll update the
+  // feature state for the feature under the mouse.
   map.on("mousemove", "Communes hover", function(e) {
 
     if (e.features.length > 0 && (hoveredStateId !== e.features[0].id)) {
@@ -149,13 +151,32 @@ function addLayers() {
       });
 
       const pd = document.getElementById('pd');
-      pd.parentNode.classList.add('textebv')
       pd.innerHTML =
-        '<br>' + '<h2><b><div style="text-align: center;">'+ e.features[0].properties.nom +'</b></h2>'
+        '<br>' + '<h2><b><div style="text-align: center;">' + e.features[0].properties.nom + '</b></h2>'
     }
 
 
   });
+
+  // When the mouse leaves the state-fill layer, update the feature state of the
+  // previously hovered feature.
+  map.on("mouseleave", "Communes hover", function() {
+
+    if (hoveredStateId) {
+      map.setFeatureState({
+        source: 'ccha_geom',
+        id: hoveredStateId
+      }, {
+        hover: false
+      });
+    }
+    hoveredStateId = null;
+    const pd = document.getElementById('pd');
+    pd.innerHTML =
+      '<h2><b>Explorer la Communauté de Communes de Haute Ariège</b></h2>'
+
+  });
+
 
   //Interactivité CLICK
   var markerHeight = 50,
