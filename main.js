@@ -219,6 +219,8 @@ function addLayers() {
         '<br>' + '<font size="2" style="color:#636466"> Email : </font>' + '<font size="2">' + e.features[0].properties.mail + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Site internet : </font>' + '<font size="2">' + e.features[0].properties.site_internet + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Horaires d\'ouverture : </font>' + '<font size="2">' + '<br>' + e.features[0].properties.horaires_ouverture + '</font>'
+        '<br>'+ '<br>' + '<font size="1"><i><a href = "'+feature.properties.source +'" target="blank"> Source : ' + feature.properties.source +'</a</i></font>'
+
       )
       .setMaxWidth("300px")
       .addTo(map);
