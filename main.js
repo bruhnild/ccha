@@ -129,7 +129,7 @@ function addLayers() {
 
 
   //Interactivité HOVER
-   // When the user moves their mouse over the state-fill layer, we'll update the
+  // When the user moves their mouse over the state-fill layer, we'll update the
   // feature state for the feature under the mouse.
   map.on("mousemove", "Communes hover", function(e) {
 
@@ -181,7 +181,7 @@ function addLayers() {
   //Interactivité CLICK
   var markerHeight = 50,
     markerRadius = 10,
-    linearOffset = 25;
+    linearOffset = 0;
   var popupOffsets = {
     'top': [0, 0],
     'top-left': [0, 0],
@@ -218,8 +218,8 @@ function addLayers() {
         '<br>' + '<font size="2" style="color:#636466"> Téléphone : </font>' + '<font size="2">' + e.features[0].properties.tel + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Email : </font>' + '<font size="2">' + e.features[0].properties.mail + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Site internet : </font>' + '<font size="2">' + e.features[0].properties.site_internet + '</font>' +
-        '<br>' + '<font size="2" style="color:#636466"> Horaires d\'ouverture : </font>' + '<font size="2">' + '<br>' + e.features[0].properties.horaires_ouverture + '</font>'+
-        '<br>'+ '<br>' + '<font size="1" style="color:#8ea7c5"><b> Source : </font>' + '</b><font size="1">' + e.features[0].properties.source +'</font>'
+        '<br>' + '<font size="2" style="color:#636466"> Horaires d\'ouverture : </font>' + '<font size="2">' + '<br>' + e.features[0].properties.horaires_ouverture + '</font>' +
+        '<br>' + '<br>' + '<font size="1" style="color:#8ea7c5"><b> Source : </font>' + '</b><font size="1">' + e.features[0].properties.source + '</font>'
 
       )
       .setMaxWidth("300px")
@@ -245,7 +245,10 @@ function addLayers() {
   });
 
 
+
+
 }
+
 
 
 // Ajout controle de navigation et echelle
