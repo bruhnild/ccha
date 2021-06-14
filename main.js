@@ -73,17 +73,6 @@ function addLayers() {
     "minzoom": 0
   });
 
-  map.addLayer({
-    id: "Communes_selected",
-    type: "fill",
-    source: "ccha_geom",
-    paint: {
-      "fill-color": "rgba( 253, 241, 100, 0.70 )"
-    },
-    "filter": ["==", "nom", ""],
-    "maxzoom": 24,
-    "minzoom": 0
-  });
 
   // The feature-state dependent fill-opacity expression will render the hover effect
   // when a feature's hover state is set to true.
@@ -139,6 +128,17 @@ function addLayers() {
   });
 
 
+  map.addLayer({
+    id: "Communes_selected",
+    type: "fill",
+    source: "ccha_geom",
+    paint: {
+      "fill-color": "rgba( 253, 241, 100, 0.70 )"
+    },
+    "filter": ["==", "nom", ""],
+    "maxzoom": 24,
+    "minzoom": 0
+  });
   //Interactivité HOVER
   // When the user moves their mouse over the state-fill layer, we'll update the
   // feature state for the feature under the mouse.
