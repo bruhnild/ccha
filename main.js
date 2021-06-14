@@ -36,7 +36,6 @@ function addSources() {
 }
 
 function loadImages() {
-  console.log("loadImages");
   var total = 2;
   var currenti = 0;
 
@@ -70,6 +69,18 @@ function addLayers() {
     paint: {
       "fill-color": "hsla(208, 72%, 54%, 0.05)"
     },
+    "maxzoom": 24,
+    "minzoom": 0
+  });
+
+  map.addLayer({
+    id: "Communes_selected",
+    type: "fill",
+    source: "ccha_geom",
+    paint: {
+      "fill-color": "rgba( 253, 241, 100, 0.70 )"
+    },
+     "filter": ["==", "nom", ""],
     "maxzoom": 24,
     "minzoom": 0
   });
@@ -196,25 +207,21 @@ function addLayers() {
   map.on('click', 'Communes', function(e) {
     new mapboxgl.Popup({
         offset: popupOffsets,
-        className: 'my-class'
       })
       .setLngLat(e.lngLat)
-      .setHTML('<h4><b><font size="4"> <div style="text-align: center;">' + e.features[0].properties.nom + ' ' + '(' + e.features[0].properties.code_insee + ')' + '</h4></b></font>' +
+      .setHTML(
+        '<div class="popup-header" style="text-align: center;"><h2>' + e.features[0].properties.nom + ' ' + '(' + e.features[0].properties.code_insee + ')'+ '</h2></div>' +
+        '<h4><b><font size="4"> <div style="text-align: center;">' + e.features[0].properties.nom + ' ' + '(' + e.features[0].properties.code_insee + ')' + '</h4></b></font>' +
         '<br>' + '<img src="' + e.features[0].properties.url_photo + '" alt="Photo de la commune"' + e.features[0].properties.nom + ' width="350">' +
-        '<br>' + '<br>' + '<font size="3" style="color:#8ea7c5"><b> Caractéristiques</b></font>'
-
-        +
+        
+        '<br>' + '<br>' + '<font size="3" style="color:#358FDE"><b> Caractéristiques</b></font>'+
         '<br>' + '<br>' + '<font size="2" style="color:#636466"> Population (2018) : </font>' + '<font size="2">' + e.features[0].properties.pop_2018 + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Superficie (km²) : </font>' + '<font size="2">' + e.features[0].properties.superficie_km + '</font>' +
-        '<br>' + '<font size="2" style="color:#636466"> Maire : </font>' + '<font size="2">' + e.features[0].properties.maire + '</font>'
+        '<br>' + '<font size="2" style="color:#636466"> Maire : </font>' + '<font size="2">' + e.features[0].properties.maire + '</font>' +
+        '<br>' + '<font size="2" style="color:#636466"> Délégué(s) communautaire(s) pour la CCHA : </font>' + '<font size="2">' + e.features[0].properties.delegues_communautaires + '</font>'+
 
-
-        +
-        '<br>' + '<font size="2" style="color:#636466"> Délégué(s) communautaire(s) pour la CCHA : </font>' + '<font size="2">' + e.features[0].properties.delegues_communautaires + '</font>'
-
-        +
-        '<br>' + '<br>' + '<font size="3" style="color:#8ea7c5"><b> Coordonnées</b></font>' +
-        '<br>' + '<br>' + '<font size="2" style="color:#636466"> Adresse : </font>' + '<font size="2">' + e.features[0].properties.adresse + '</font>' +
+        '<br>' + '<br>' + '<font size="3" style="color:#358FDE"><b> Coordonnées</b></font>' +
+        '<br>' + '<br>' + '<font size="2" style="color:#636466"> Adresse mairie: </font>' + '<font size="2">' + e.features[0].properties.adresse + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Téléphone : </font>' + '<font size="2">' + e.features[0].properties.tel + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Email : </font>' + '<font size="2">' + e.features[0].properties.mail + '</font>' +
         '<br>' + '<font size="2" style="color:#636466"> Site internet : </font>' + '<font size="2">' + e.features[0].properties.site_internet + '</font>' +
@@ -225,6 +232,12 @@ function addLayers() {
       .setMaxWidth("300px")
       .addTo(map);
   });
+
+      // update filter to highlight clicked layer
+         map.on('click', 'Communes', function (e) {
+            var features = map.queryRenderedFeatures(e.point);
+            map.setFilter('Communes_selected', ["==", "nom", features[0].properties.nom]);
+        });
 
 
   map.on('mousemove', function(e) {
@@ -245,6 +258,10 @@ function addLayers() {
   });
 
 
+// Centrer la carte sur les coordonnées des couches 
+map.on('click', 'Commune etiquettes', function (e) {
+map.flyTo({center: e.features[0].geometry.coordinates});
+});
 
 
 }
