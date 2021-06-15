@@ -11,7 +11,7 @@ var map = new mapboxgl.Map({
 });
 
 
-var hoveredStateId = null;
+var hoveredStateNom = "";
 
 map.on('load', function() {
   addSources();
@@ -32,6 +32,10 @@ function addSources() {
     data: "https://raw.githubusercontent.com/bruhnild/ccha/main/data/ccha_geom_centroid.geojson",
   });
 
+  map.addSource("etalab_contours_admin", {
+    type: "vector",
+    url: "https://openmaptiles.geo.data.gouv.fr/data/decoupage-administratif.json"
+  });
 
 }
 
@@ -62,48 +66,179 @@ function addLayers() {
     }
   }
 
+
   map.addLayer({
     id: "Communes",
     type: "fill",
     source: "ccha_geom",
+    layout: {
+      'visibility': 'visible'
+    },
     paint: {
       "fill-color": "hsla(208, 72%, 54%, 0.05)"
     },
+
     "maxzoom": 24,
     "minzoom": 0
   });
 
-
-  // The feature-state dependent fill-opacity expression will render the hover effect
-  // when a feature's hover state is set to true.
   map.addLayer({
-    "id": "Communes hover",
-    "type": "fill",
-    "source": "ccha_geom",
-    "layout": {},
-    "paint": {
-      "fill-color": "#358FDE",
-      "fill-opacity": ["case", ["boolean", ["feature-state", "hover"], false],
-        0.5,
-        0.1
-      ]
-    }
+    id: "Communes_etalab",
+    type: "fill",
+    source: "etalab_contours_admin",
+    "source-layer": "communes",
+    paint: {
+      "fill-color": "hsla(208, 72%, 54%, 0.05)"
+    },
+    "filter": ["all", ["in", "code",
+      '09176',
+      '09004',
+      '09012',
+      '09020',
+      '09023',
+      '09024',
+      '09296',
+      '09030',
+      '09031',
+      '09032',
+      '09053',
+      '09064',
+      '09070',
+      '09078',
+      '09087',
+      '09088',
+      '09096',
+      '09131',
+      '09134',
+      '09139',
+      '09140',
+      '09143',
+      '09155',
+      '09156',
+      '09159',
+      '09162',
+      '09171',
+      '09189',
+      '09193',
+      '09197',
+      '09218',
+      '09220',
+      '09222',
+      '09226',
+      '09228',
+      '09230',
+      '09232',
+      '09237',
+      '09239',
+      '09252',
+      '09283',
+      '09287',
+      '09295',
+      '09298',
+      '09311',
+      '09318',
+      '09320',
+      '09334',
+      '09325',
+      '09326',
+      '09328',
+      '09330'
+    ]]
   });
 
-
   map.addLayer({
-    id: "Communes_contour",
+    id: "Communes contours etalab",
     type: "line",
-    source: "ccha_geom",
+    source: "etalab_contours_admin",
+    "source-layer": "communes",
     paint: {
       "line-color": "hsl(200, 67%, 34%)",
       "line-width": 1
     },
-    "maxzoom": 24,
-    "minzoom": 0
+    "filter": ["all", ["in", "code",
+      '09176',
+      '09004',
+      '09012',
+      '09020',
+      '09023',
+      '09024',
+      '09296',
+      '09030',
+      '09031',
+      '09032',
+      '09053',
+      '09064',
+      '09070',
+      '09078',
+      '09087',
+      '09088',
+      '09096',
+      '09131',
+      '09134',
+      '09139',
+      '09140',
+      '09143',
+      '09155',
+      '09156',
+      '09159',
+      '09162',
+      '09171',
+      '09189',
+      '09193',
+      '09197',
+      '09218',
+      '09220',
+      '09222',
+      '09226',
+      '09228',
+      '09230',
+      '09232',
+      '09237',
+      '09239',
+      '09252',
+      '09283',
+      '09287',
+      '09295',
+      '09298',
+      '09311',
+      '09318',
+      '09320',
+      '09334',
+      '09325',
+      '09326',
+      '09328',
+      '09330'
+    ]]
   });
 
-  // });
+
+
+  map.addLayer({
+    id: "Communes hover",
+    type: "fill",
+    source: "etalab_contours_admin",
+    "source-layer": "communes",
+    "layout": {},
+    "paint": {
+      "fill-color": "#358FDE",
+      "fill-opacity": 0.5
+
+    },
+    filter: ["==", "nom", hoveredStateNom]
+  });
+
+
+
+  map.addLayer({
+    id: "Communes_selected",
+    type: "fill",
+    source: "ccha_geom",
+    paint: {
+      "fill-color": "rgba( 253, 241, 100, 0.70 )"
+    },
+    filter: ["==", "nom", ""]
+  });
+
 
   map.addLayer({
 
@@ -126,63 +261,36 @@ function addLayers() {
   });
 
 
-  map.addLayer({
-    id: "Communes_selected",
-    type: "fill",
-    source: "ccha_geom",
-    paint: {
-      "fill-color": "rgba( 253, 241, 100, 0.70 )"
-    },
-    "filter": ["==", "nom", ""],
-    "maxzoom": 24,
-    "minzoom": 0
-  });
+
   //Interactivité HOVER
   // When the user moves their mouse over the state-fill layer, we'll update the
   // feature state for the feature under the mouse.
-  map.on("mousemove", "Communes hover", function(e) {
-
-    if (e.features.length > 0 && (hoveredStateId !== e.features[0].id)) {
-      console.log('hoveredStateId',hoveredStateId)
-      console.log('e.features[0].id',e.features[0].id)
-      console.log('e.features[0]',e.features[0])
-      if (hoveredStateId !== null) {
-        map.setFeatureState({
-          source: 'ccha_geom',
-          id: hoveredStateId
-        }, {
-          hover: false
-        });
-      }
-      hoveredStateId = e.features[0].id;
-      map.setFeatureState({
-        source: 'ccha_geom',
-        id: hoveredStateId
-      }, {
-        hover: true
-      });
-
-      const pd = document.getElementById('pd');
-      pd.innerHTML =
-        '<br>' + '<h2><b><div style="text-align: center;">' + e.features[0].properties.nom + '</b></h2>'
+  map.on("mousemove", "Communes_etalab", function(e) {
+    var features = map.queryRenderedFeatures(e.point);
+    if (e.features.length > 0 
+      && features[0].properties 
+      && features[0].properties.nom 
+      && hoveredStateNom !== features[0].properties.nom)  
+    {
+      hoveredStateNom = features[0].properties.nom
+      map.setFilter('Communes hover', ["==", "nom", hoveredStateNom]);
     }
+   
+    const pd = document.getElementById('pd');
+    pd.innerHTML =
+      '<br>' + '<h2><b><div style="text-align: center;">' + e.features[0].properties.nom + '</b></h2>'
 
 
   });
+
+
 
   // When the mouse leaves the state-fill layer, update the feature state of the
   // previously hovered feature.
   map.on("mouseleave", "Communes hover", function() {
 
-    if (hoveredStateId) {
-      map.setFeatureState({
-        source: 'ccha_geom',
-        id: hoveredStateId
-      }, {
-        hover: false
-      });
-    }
-    hoveredStateId = null;
+    hoveredStateNom = ""
+      map.setFilter('Communes hover', ["==", "nom", hoveredStateNom]);
     const pd = document.getElementById('pd');
     pd.innerHTML =
       '<h2><b>Explorer la Communauté de Communes de Haute Ariège</b></h2>'
@@ -235,7 +343,7 @@ function addLayers() {
   });
 
   // update filter to highlight clicked layer
-  map.on('click', 'Communes', function(e) {
+  map.on('click', 'Communes_etalab', function(e) {
     var features = map.queryRenderedFeatures(e.point);
     map.setFilter('Communes_selected', ["==", "nom", features[0].properties.nom]);
   });
