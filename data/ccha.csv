@@ -1,53 +1,53 @@
 id,nom,code_insee,gentile,superficie_km,pop_2018,densite_hab_km
-1,Luzenac,9176,Luzenacois ,26.43,530,20
-2,Albiès ,9004,Albiésois ,7.69,122,16
-3,Appy ,9012,Pynarols ,6.1,26,4.3
-4,Artigues ,9020,Artiguais ,12.43,49,3.9
-5,Ascou ,9023,Ascounais ,35.59,120,3.4
-6,Aston ,9024,Astonnais ,153.8,214,1.4
-7,Aulos-Sinsat ,9296,Aulosois-Sinsatois ,5.05,159,31
-8,Auzat ,9030,Auzatois ,162.74,481,3
-9,Axiat ,9031,Axiatois ,9.54,41,4.3
-10,Ax-les-Thermes ,9032,Axéens ,30.26,1277,42
-11,Bestiac ,9053,Bestiacois ,6.57,20,3
-12,Bouan ,9064,Bouannais ,3.44,39,11
-13,Les Cabannes ,9070,Cabannais ,0.87,335,385
-14,Carcanières ,9078,Carcanièrois ,6.5,75,12
-15,Caussou ,9087,Caussounais ,15.83,48,3
-16,Caychax ,9088,Caychatois ,5.66,15,2.7
-17,Château-Verdun ,9096,Castelverdunois ,0.79,43,54
-18,Garanou ,9131,Garnouais ,3.01,153,51
-19,Gestiès ,9134,Gestiérois ,27.46,31,1.1
-20,L'Hospitalet-près-l'Andorre ,9139,Espitalois ,26.12,100,3.8
-21,Ignaux ,9140,Ignaous ,5.49,116,21
-22,Illier-et-Laramade ,9143,Illiermadois ,5.02,29,5.8
-23,Larcat ,9155,Larcatois ,9.31,46,4.9
-24,Larnat ,9156,Larnatois ,5.6,20,3.6
-25,Lassur ,9159,Lassuréens ,11.99,92,7.7
-26,Lercoul ,9162,Lercolois ,19.01,19,1
-27,Lordat ,9171,Lordatois ,7.37,69,9.4
-28,Mérens-les-Vals ,9189,Merengois ,80.12,168,2.1
-29,Mijanès ,9193,Mijanésiens ,39.95,60,1.5
-30,Montaillou ,9197,Montallionois ,8.61,17,2
-31,Orgeix ,9218,Orgeixois ,18.39,88,4.8
-32,Orlu ,9220,Orluséens ,70.79,164,2.3
-33,Orus ,9222,Orusiens ,9.12,26,2.9
-34,Pech ,9226,Péchois ,4.81,37,7.7
-35,Perles-et-Castelet ,9228,Perlois ,17.77,223,13
-36,Le Pla ,9230,Pléens ,12.97,58,4.5
-37,Prades ,9232,Pradéens ,28.97,32,1.1
-38,Le Puch ,9237,Puchéens ,2.89,29,10
-39,Quérigut ,9239,Quérigutéens ,36.4,133,3.7
-40,Rouze ,9252,Rouzéens ,9.51,86,9
-41,Savignac-les-Ormeaux ,9283,Savignacois ,28.31,380,13
-42,Senconac ,9287,Senconacois ,4.67,13,2.8
-43,Siguer ,9295,Siguerois ,38.73,96,2.5
-44,Sorgeat ,9298,Sorgeatois ,18.92,81,4.3
-45,Tignac ,9311,Tignacois ,3.53,24,6.8
-46,Unac ,9318,Unaquois ,2.65,121,46
-47,Urs ,9320,Urséens ,0.91,31,34
-48,Val-de-Sos ,9334,Val-de-sossois ,53.14,594,11
-49,Vaychis ,9325,Vaychissiens ,4.49,26,5.8
-50,Vèbre ,9326,Vebrois ,5.19,125,24
-51,Verdun ,9328,Verdunois ,11.71,219,19
-52,Vernaux ,9330,Vernausiens ,6.06,28,4.6
+1,Luzenac,09176,Luzenacois ,26.43,530,20
+2,Albiès ,09004,Albiésois ,7.69,122,16
+3,Appy ,09012,Pynarols ,6.1,26,4.3
+4,Artigues ,09020,Artiguais ,12.43,49,3.9
+5,Ascou ,09023,Ascounais ,35.59,120,3.4
+6,Aston ,09024,Astonnais ,153.8,214,1.4
+7,Aulos-Sinsat ,09296,Aulosois-Sinsatois ,5.05,159,31
+8,Auzat ,09030,Auzatois ,162.74,481,3
+9,Axiat ,09031,Axiatois ,9.54,41,4.3
+10,Ax-les-Thermes ,09032,Axéens ,30.26,1277,42
+11,Bestiac ,09053,Bestiacois ,6.57,20,3
+12,Bouan ,09064,Bouannais ,3.44,39,11
+13,Les Cabannes ,09070,Cabannais ,0.87,335,385
+14,Carcanières ,09078,Carcanièrois ,6.5,75,12
+15,Caussou ,09087,Caussounais ,15.83,48,3
+16,Caychax ,09088,Caychatois ,5.66,15,2.7
+17,Château-Verdun ,09096,Castelverdunois ,0.79,43,54
+18,Garanou ,09131,Garnouais ,3.01,153,51
+19,Gestiès ,09134,Gestiérois ,27.46,31,1.1
+20,L'Hospitalet-près-l'Andorre ,09139,Espitalois ,26.12,100,3.8
+21,Ignaux ,09140,Ignaous ,5.49,116,21
+22,Illier-et-Laramade ,09143,Illiermadois ,5.02,29,5.8
+23,Larcat ,09155,Larcatois ,9.31,46,4.9
+24,Larnat ,09156,Larnatois ,5.6,20,3.6
+25,Lassur ,09159,Lassuréens ,11.99,92,7.7
+26,Lercoul ,09162,Lercolois ,19.01,19,1
+27,Lordat ,09171,Lordatois ,7.37,69,9.4
+28,Mérens-les-Vals ,09189,Merengois ,80.12,168,2.1
+29,Mijanès ,09193,Mijanésiens ,39.95,60,1.5
+30,Montaillou ,09197,Montallionois ,8.61,17,2
+31,Orgeix ,09218,Orgeixois ,18.39,88,4.8
+32,Orlu ,09220,Orluséens ,70.79,164,2.3
+33,Orus ,09222,Orusiens ,9.12,26,2.9
+34,Pech ,09226,Péchois ,4.81,37,7.7
+35,Perles-et-Castelet ,09228,Perlois ,17.77,223,13
+36,Le Pla ,09230,Pléens ,12.97,58,4.5
+37,Prades ,09232,Pradéens ,28.97,32,1.1
+38,Le Puch ,09237,Puchéens ,2.89,29,10
+39,Quérigut ,09239,Quérigutéens ,36.4,133,3.7
+40,Rouze ,09252,Rouzéens ,9.51,86,9
+41,Savignac-les-Ormeaux ,09283,Savignacois ,28.31,380,13
+42,Senconac ,09287,Senconacois ,4.67,13,2.8
+43,Siguer ,09295,Siguerois ,38.73,96,2.5
+44,Sorgeat ,09298,Sorgeatois ,18.92,81,4.3
+45,Tignac ,09311,Tignacois ,3.53,24,6.8
+46,Unac ,09318,Unaquois ,2.65,121,46
+47,Urs ,09320,Urséens ,0.91,31,34
+48,Val-de-Sos ,09334,Val-de-sossois ,53.14,594,11
+49,Vaychis ,09325,Vaychissiens ,4.49,26,5.8
+50,Vèbre ,09326,Vebrois ,5.19,125,24
+51,Verdun ,09328,Verdunois ,11.71,219,19
+52,Vernaux ,09330,Vernausiens ,6.06,28,4.6
