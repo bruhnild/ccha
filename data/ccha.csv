@@ -1,179 +1,53 @@
-id,nom,code_insee,gentile,superficie_km,pop_2018,densite_hab_km,url_photo,maire,delegues_communautaires,adresse,tel,mail,site_internet,horaires_ouverture,source,x_coord,y_coord
-"1",Luzenac,"09176",Luzenacois ,26.43,"530",20,https://www.communes.com/images/thumbs/midi-pyrenees/ariege/luzenac_09250/730x328/luzenac_181720.jpg,Christian Loubet,http://www.luzenac.fr/conseil_municipal.aspx,"10 Rue de la Mairie, 09250 Luzenac",05 61 64 48 61,mairieluzenac@orange.fr,http://www.luzenac.fr/,"
-Du Lundi au Jeudi : 10h - 12h et 16h - 18h. 
-
-Le Vendredi : 10h - 12h ",IGN & Wikipédia & Site internet de la mairie de Luzenac,1.73668,42.7186
-"2",Albiès ,"09004",Albiésois ,7.69,"122",16,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Albi%C3%A8s_Mairie.jpg/560px-Albi%C3%A8s_Mairie.jpg,Bholème Boufaid,Non connu,"1 place de la Mairie, 09310 Albiès",05 61 64 77 03,mairiealbies@wanadoo.fr,Pas de site internet,"
-Le Lundi : 09h00 - 16h00. 
-
-Permanence de Monsieur le Maire Mardi et Vendredi : 17h30- 19h30",IGN & Wikipédia,1.69926,42.75425
-"3",Appy ,"09012",Pynarols ,6.1,"26",4.3,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Appy_vu_de_Beille.jpg/560px-Appy_vu_de_Beille.jpg,Yves Huez,Non connu,"Mairie,
-09250 Appy ",05 61 64 47 29 ,commune-des-appy@orange.fr ,Pas de site internet,Le Lundi : 14h00 - 15h00 ,IGN & Wikipédia,1.74052,42.80312
-"4",Artigues ,"09020",Artiguais ,12.43,"49",3.9,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Artigues_2.jpg/560px-Artigues_2.jpg,Guy Annouilles,Non connu,"Place de la Mairie,
-09460 Artigues",04 68 20 42 12,mairie.artigues310@orange.fr,Pas de site internet,"
-Le Mardi : 08h30 - 12h30
-
-Le Vendredi : 08h30 - 12h30 ",IGN & Wikipédia,2.03395,42.69024
-"5",Ascou ,"09023",Ascounais ,35.59,"120",3.4,https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Ascou_1.jpg/560px-Ascou_1.jpg,Sabine Carriere,Non connu,"Hotel De Ville
-Rue Principale,
-09110 Ascou",05 61 64 21 23 ,commune-ascou@orange.fr,Pas de site internet,"
-Vendredi : 14:00 - 16:30 (Accueil ouvert uniquement les semaines paires)
-
-Jeudi : 09:00 - 12:00 et 14:00 - 17:00
-
-Mardi : 09:00 - 12:00 et 14:00 - 17:00",IGN & Wikipédia,1.9164,42.71911
-"6",Aston ,"09024",Astonnais ,153.8,"214",1.4,https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Aston_jcb_2018.jpg/560px-Aston_jcb_2018.jpg,Alain Pujol,Non connu,"Place de la Paichere, 09310 Aston",05 61 64 77 39, communeaston.09@gmail.com,http://www.mairie-aston.fr/,"
-Le Mardi : 14h00 - 16h00
-
-Le Mercredi : 10h00 - 12h00
-
-Le Vendredi : 14h00 - 17h00",IGN & Wikipédia & Site internet de la mairie de Aston ,1.65697,42.69777
-"7",Aulos-Sinsat ,"09296",Aulosois-Sinsatois ,5.05,"159",31,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Aulos%2C_Ariege%2C_Entry.JPG/560px-Aulos%2C_Ariege%2C_Entry.JPG,Jean Jacques Stroh,https://www.aulos-sinsat.fr/le-conseil-municipal_fr.html,"5 avenue Paul Berdot, 09310 SINSAT",05 61 64 97 20,mairie.aulos-sinsat@orange.fr,https://www.aulos-sinsat.fr/,"
-Le Lundi : 10h00 - 12h00
-
-Le Jeudi : 14h00 - 18h00 ",IGN & Wikipédia & Site internet de la mairie de Aulos-Sinsat ,1.66174,42.79852
-"8",Auzat ,"09030",Auzatois ,162.74,"481",3,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/Fontaine_AUZAT.jpg/560px-Fontaine_AUZAT.jpg,Abdelhamid El Yacoubi,http://www.auzat.fr/fr/conseil-municipal,"Rue de la Mairie, 09 220 Auzat",05 61 64 88 47,mairie@auzat.fr,http://www.auzat.fr/,Du Lundi au Vendredi : 9h - 12h et 14h - 17h ,IGN & Wikipédia & Site internet de la mairie de Auzat ,1.43827,42.69764
-"9",Axiat ,"09031",Axiatois ,9.54,"41",4.3,https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Axiat_-_%C3%A9glise.jpg/560px-Axiat_-_%C3%A9glise.jpg,Maurice Sicre,Non connu,"Le Village, 09250 Axiat",05 61 64 40 04,commune.axiat@orange.fr,Pas de site internet,Le Jeudi : 16h00 - 17h00 ,IGN & Wikipédia,1.7576,42.79962
-"10",Ax-les-Thermes ,"09032",Axéens ,30.26,"1277",42,https://upload.wikimedia.org/wikipedia/commons/thumb/a/ab/Ax_les_Thermes_1.jpg/560px-Ax_les_Thermes_1.jpg,Dominique Fourcade,http://www.mairie-ax.fr/mairie/conseil-municipal,"Place Roussel, 09110 Ax-les-Thermes",05 61 64 20 21,contact@mairieax.fr,http://www.mairie-ax.fr/,"Lundi, Mardi, Jeudi, Vendredi : 9h30 - 12h00 et 13h30 - 16h00
-
-Mercredi matin : 9h30 - 12h00
-
-Samedi matin : 9h00 - 12h00 ",IGN & Wikipédia & Site internet de la mairie de Ax-les-Thermes ,1.8053,42.68405
-"11",Bestiac ,"09053",Bestiacois ,6.57,"20",3,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Bestiac_font2.JPG/560px-Bestiac_font2.JPG,Gérard Tauriac,Non connu,"Mairie, 09250 Bestiac ",05 61 64 45 07,mairie.bestiac@wanadoo.fr,Pas de site internet,Le Mercredi : 14h00 - 17h00 ,IGN & Wikipédia,1.79671,42.7835
-"12",Bouan ,"09064",Bouannais ,3.44,"39",11,https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Bouan.jpg/560px-Bouan.jpg,Chantal Martin,Non connu,"Le Village, 09310 Bouan ",05 61 64 75 00,mairie-bouan@orange.fr,Pas de site internet,"
-Le Mercredi : 14h00 - 17h00
-
-Le Vendredi : 14h00 - 17h00 ",IGN & Wikipédia,1.645,42.79158
-"13",Les Cabannes ,"09070",Cabannais ,0.87,"335",385,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Le_Qui%C3%A9_vue_depuis_Pech.JPG/560px-Le_Qui%C3%A9_vue_depuis_Pech.JPG,Daniel Géraud,https://www.lescabannes.com/info/,"Place des Platanes, 09310 Les Cabannes",05 61 64 77 09,mairie@lescabannes.com,https://www.lescabannes.com/,"
-Du Lundi au Jeudi : 08h30 - 12h00 et 14h00 - 17h00
-
-Le Vendredi : 08h30 - 12h00 et 14h00 - 16h00",IGN & Wikipédia & Site internet de la mairie de Les Cabannes ,1.69153,42.78377
-"14",Carcanières ,"09078",Carcanièrois ,6.5,"75",12,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Carcani%C3%A8res_6.jpg/560px-Carcani%C3%A8res_6.jpg,Jacques Cayrol,Non connu,"Le Village, 09460 Carcanières ",04 68 20 44 09,mairie.carcanieres@wanadoo.fr ,Pas de site internet,"
-Le Mardi : 08h30 - 12h30 et 13h30 - 17h30
-
-Le Jeudi : 08h30 - 12h30 et 13h30 - 17h30 ",IGN & Wikipédia,2.1253,42.70877
-"15",Caussou ,"09087",Caussounais ,15.83,"48",3,https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Caussou_2005_1.jpg/560px-Caussou_2005_1.jpg,Anne Laplume,http://caussou.fr/index.php/mairie-et-administration/,"RD 20, Place Saint Jean Baptiste, 09250 Caussou",05 61 01 59 89,mairie.caussou@wanadoo.fr,http://caussou.fr/,Le Jeudi : 17h00 - 18h00 ,IGN & Wikipédia & Site internet de la mairie de Caussou ,1.82095,42.77454
-"16",Caychax ,"09088",Caychatois ,5.66,"15",2.7,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Rando_Beille_%2852%29_Caychax.jpg/560px-Rando_Beille_%2852%29_Caychax.jpg,Jean-Pierre Doumeng,Non connu,"Mairie, 09250 Caychax",05 61 64 40 26,mairie.caychax@orange.fr,Pas de site internet,Le Mercredi : 14h00 - 18h00,IGN & Wikipédia,1.72921,42.8076
-"17",Château-Verdun ,"09096",Castelverdunois ,0.79,"43",54,https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ch%C3%A2teau_de_gudanes.jpg/560px-Ch%C3%A2teau_de_gudanes.jpg,Thierry Boës,Non connu,"Rue de la Mairie, 09310 Château-Verdun ",05 61 64 77 52,chateauverdun@wanadoo.fr ,Pas de site internet,Le Mardi : 14h30 - 17h00 ,IGN & Wikipédia,1.67742,42.78058
-"18",Garanou ,"09131",Garnouais ,3.01,"153",51,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/LuzenacUsineTalc2.jpg/560px-LuzenacUsineTalc2.jpg,Thierry Olivié,Non connu,"4 rue de la Mairie, 09250 Garanou ",05 61 64 48 46,garanou.mairie@wanadoo.fr,Pas de site internet,Le Jeudi : 16h00 - 19h00 ,IGN & Wikipédia,1.74645,42.76193
-"19",Gestiès ,"09134",Gestiérois ,27.46,"31",1.1,https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Gesties_0.jpg/560px-Gesties_0.jpg,Alain Marfaing,Non connu,"1 rue de Balgeso, 09220 Gestiès ",05 61 02 65 60,mairie.de.gesties@orange.fr ,Pas de site internet,"
-Le Lundi : 09h00 - 13h00 (accueil ouvert en semaine paire et accueil 9h - 17h en semaine impaire)
-
-Le Jeudi : 09h00 - 13h00 (accueil ouvert en semaine paire) ",IGN & Wikipédia,1.57949,42.71515
-"20",L'Hospitalet-près-l'Andorre ,"09139",Espitalois ,26.12,"100",3.8,https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/L_hospitalet_pres_l_andorre_ariege.JPG/560px-L_hospitalet_pres_l_andorre_ariege.JPG,Arnaud Diaz ,Non connu,"Place Soulé
-09390 L’Hospitalet Près l’Andorre",05 61 05 20 04,contact@mairie-hospitalet.fr,https://mairie-hospitalet.fr/,"
-Le Lundi : 9h30 – 12h30
-
-Le Mardi : 9h30 - 12h30 et 16h00 – 18h00
-
-Le Jeudi : 9h30 – 12h30
-
-Le Vendredi : 14h00 - 16h00",IGN & Wikipédia & Site internet de la mairie de L'Hospitalet-près-l'Andorre ,1.7739,42.59476
-"21",Ignaux ,"09140",Ignaous ,5.49,"116",21,https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Ignaux_Sorgeat.jpg/560px-Ignaux_Sorgeat.jpg,Michel Barre,Non connu,"Le Village, 09110 Ignaux ",06 72 93 77 30,commune.ignaux09@orange.fr,Pas de site internet,Le Mardi : 17h00 - 18h30 (accueil possible sur rendez-vous) ,IGN & Wikipédia,1.83964,42.74131
-"22",Illier-et-Laramade ,"09143",Illiermadois ,5.02,"29",5.8,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Defaut_2.svg/langfr-2880px-Defaut_2.svg.png,André Dupuy,https://www.communes.com/images/thumbs/midi-pyrenees/ariege/illier-et-laramade_09220/730x328/illier-et-laramade_181751.jpg,"2 place de la Mairie, 09220 Illier et Laramade",05 61 05 80 78,mairieillierlaramade@orange.fr,http://www.mairie-illierlaramade.fr/,"
-Le Mardi : 14h – 16h
-
-Le Jeudi : 16h - 18h",IGN & Wikipédia & Site internet de la mairie de Illier-et-Laramade ,1.54285,42.79085
-"23",Larcat ,"09155",Larcatois ,9.31,"46",4.9,https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Larcat.JPG/560px-Larcat.JPG,Didier Carbonell,http://www.larcat.fr/public/?code=l-equipe-municipale,"Mairie de Larcat, 4 Place de la Mairie, 09155  Larcat",05 61 64 75 43,larcat-mairie@orange.fr,http://www.larcat.fr/public/,"Vendredi : 14h - 18h 
-
-Samedi semaine paire : 10h - 12h",IGN & Wikipédia & Site internet de la mairie de Larcat ,1.64681,42.77053
-"24",Larnat ,"09156",Larnatois ,5.6,"20",3.6,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Larnat_5.jpg/560px-Larnat_5.jpg,Claude Gouzy,http://larnat.e-monsite.com/pages/la-mairie/composition-de-l-equipe-municipale.html,"Le Village, 09310 Larnat ",05 61 64 99 00,commune.de.larnat@orange.fr,http://larnat.e-monsite.com/,Le Mercredi : 09h00 - 12h00,IGN & Wikipédia & Site internet de la mairie de Larnat ,1.63037,42.79355
-"25",Lassur ,"09159",Lassuréens ,11.99,"92",7.7,https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Defaut_2.svg/langfr-2880px-Defaut_2.svg.png,Richard Martinez,Non connu,"Place de la Mairie, 09310 Lassur ",05 61 64 96 66,mairie.lassur@wanadoo.fr,Pas de site internet,"Le Lundi : 09h00 - 12h00 et 14h00 - 17h00
-Le Mercredi : 14h00 - 16h00 (accueil sur rendez-vous uniquement) ",IGN & Wikipédia,1.71809,42.7417
-"26",Lercoul ,"09162",Lercolois ,19.01,"19",1,https://upload.wikimedia.org/wikipedia/commons/thumb/0/06/LERCOUL.jpg/560px-LERCOUL.jpg,François Lafon ,https://lercoul-09.fr/vie-municipale/conseil-municipal/,"Le Village, 09220 Lercoul",05 61 05 70 12,communelercoul@orange.fr,https://lercoul-09.fr/,Le Jeudi : 9H30 - 16H,IGN & Wikipédia & Site internet de la mairie de Lercoul ,1.52442,42.71063
-"27",Lordat ,"09171",Lordatois ,7.37,"69",9.4,https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Village_de_Lordat_vu_du_chateau.jpg/560px-Village_de_Lordat_vu_du_chateau.jpg,Christian Marcaillou,Non connu,"Le Village, 09250 Lordat ",05 61 64 44 79,mairie.lordat@wanadoo.fr,Pas de site internet,Le Vendredi : 08h30 - 16h30 ,IGN & Wikipédia,1.77909,42.7963
-"28",Mérens-les-Vals ,"09189",Merengois ,80.12,"168",2.1,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c8/M%C3%A9rens_2.jpg/560px-M%C3%A9rens_2.jpg,Jean-Pierre Sicre,Non connu,"60 rue de l'École, 09110 Mérens-les-Vals ",05 61 64 33 77 ,mairie@merenslesvals.fr,https://www.merenslesvals.fr/,Du Lundi au Vendredi : 09h00 - 12h00 et 14h00 - 18h00,IGN & Wikipédia & Site internet de la mairie de Mérens-les-Vals ,1.83296,42.6329
-"29",Mijanès ,"09193",Mijanésiens ,39.95,"60",1.5,https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Le_village_de_Mijanes_-_panoramio.jpg/560px-Le_village_de_Mijanes_-_panoramio.jpg,Christian Dubuc,Non connu,"Place de la Mairie, 09460 Mijanès ",04 68 20 40 41,mairiedemijanes@orange.fr,Pas de site internet,"
-Le Lundi : 08h30 - 12h30
-
-Le Mercredi : 08h30 - 12h30 et 13h30 - 17h30 ",IGN & Wikipédia,2.00419,42.70792
-"30",Montaillou ,"09197",Montallionois ,8.61,"17",2,https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Montaillou_28-04-05_8.jpg/560px-Montaillou_28-04-05_8.jpg,Jean Clergue,Non connu,"Le Village, 09110 Montaillou ",04 68 20 31 91,mairie.montaillou09@wanadoo.fr,http://www.montaillou.fr/,Le Mercredi : 09h00 - 12h00 et 13h30 - 17h00 ,IGN & Wikipédia & Site internet de la mairie de Montaillou ,1.9017,42.78367
-"31",Orgeix ,"09218",Orgeixois ,18.39,"88",4.8,https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Orgeix_2018_2.jpg/560px-Orgeix_2018_2.jpg,Betty Gonzalez,Non connu,"Place de la Mairie, 09110 Orgeix ",05 61 64 20 08,mairie.orgeix@wanadoo.fr,Pas de site internet,Du Mardi au Vendredi : 08h30 - 12h00 et 13h30 - 17h00 ,IGN & Wikipédia,1.87957,42.67586
-"32",Orlu ,"09220",Orluséens ,70.79,"164",2.3,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/Orlu_2.jpg/560px-Orlu_2.jpg,Alain Naudy,Non connu,"Place André-Amiel, 09110 Orlu ",05 61 64 21 70,mairie-orlu@wanadoo.fr,http://www.vallee-orlu.com,"
-Du Lundi au Mardi : 09h00 - 12h00 et 14h00 - 17h00
-
-Le Mercredi : 09h00 - 12h00 et 14h00 - 16h30
-
-Du Jeudi au Vendredi : 09h00 - 12h00 et 14h00 - 17h00 ",IGN & Wikipédia & Site internet de la mairie de Orlu ,1.94767,42.65838
-"33",Orus ,"09222",Orusiens ,9.12,"26",2.9,https://upload.wikimedia.org/wikipedia/commons/thumb/9/92/A_view_from_Orus.jpg/560px-A_view_from_Orus.jpg,"Éric, Albert Delpy",Non connu,"Mairie, 09220 Orus ",05 61 03 83 02,mairie.orus@wanadoo.fr,Pas de site internet,Le Mardi : 08h00 - 12h00 ,IGN & Wikipédia,1.51474,42.79345
-"34",Pech ,"09226",Péchois ,4.81,"37",7.7,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Le_Qui%C3%A9_vue_depuis_Pech.JPG/560px-Le_Qui%C3%A9_vue_depuis_Pech.JPG,Véronique Subra,Non connu,"Le Bourg, 09310 Pech",05 61 03 53 73,mairiedepech.ariege@wanadoo.fr,Pas de site internet,Le Mardi : 09h00 - 16h00 ,IGN & Wikipédia,1.69091,42.7629
-"35",Perles-et-Castelet ,"09228",Perlois ,17.77,"223",13,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/Perles_Labouche_803_PA_%28DPJ%29.jpg/560px-Perles_Labouche_803_PA_%28DPJ%29.jpg,"
-Mandat 	Gérard Durand",Non connu,"3 rec du Marti, 09110 Perles-et-Castelet ",05 61 64 24 58,mairie.perlesetcastelet@orange.fr,Pas de site internet,"
-Le Lundi : 09h00 - 12h00 et 13h30 - 17h30
-
-Le Mardi : 09h00 - 12h00 et 13h30 - 19h00
-
-Du Mercredi au Jeudi : 09h00 - 12h00 et 13h30 - 17h30
-
-Le Vendredi : 09h00 - 12h00 ",IGN & Wikipédia,1.76842,42.71442
-"36",Le Pla ,"09230",Pléens ,12.97,"58",4.5,https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Lepla.JPG/560px-Lepla.JPG,André Olive,Non connu,"Place du 15-Août, 09460 Le Pla ",04 68 20 40 40,mairie.le-pla@wanadoo.fr,Pas de site internet,"
-Le Lundi : 13h30 - 17h45
-
-Le Jeudi : 08h30 - 12h30 et 13h30 - 17h30 ",IGN & Wikipédia,2.05459,42.68826
-"37",Prades ,"09232",Pradéens ,28.97,"32",1.1,https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Prades_avril_2005.jpg/560px-Prades_avril_2005.jpg,Hervé Peloffi,Non connu,"Mairie, 09110 Prades",04 68 20 33 06,mairie.prades09@wanadoo.fr,https://prades-ariege.fr/,"
-Du Lundi au Mardi : 16h00 - 17h30
-
-Le Jeudi : 16h00 - 17h30 ",IGN & Wikipédia & Site internet de la mairie de Prades ,1.8631,42.78738
-"38",Le Puch ,"09237",Puchéens ,2.89,"29",10,https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Le_Puch_2.jpg/560px-Le_Puch_2.jpg,Michel Uteza,Non connu,"2 rue de la Mairie, 09460 Le Puch",04 68 20 46 48,mairie.de.le.puch@wanadoo.fr,Pas de site internet,"
-Le Lundi : 13h30 - 16h30
-
-Le Jeudi : 13h30 - 16h30 ",IGN & Wikipédia,2.09928,42.72165
-"39",Quérigut ,"09239",Quérigutéens ,36.4,"133",3.7,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Querigut-vue_g%C3%A9n%C3%A9rale.JPG/560px-Querigut-vue_g%C3%A9n%C3%A9rale.JPG,Jean-François Bataille,Non connu,"Le Bourg, 09460 Quérigut ",04 68 20 41 71,contact@querigut-levillage.fr,https://www.querigut-levillage.fr/,"
-Le Lundi : 09h00 - 12h00
-
-Le Mardi : 09h00 - 12h00 et 13h30 - 16h30
-
-Le Jeudi :  09h00 - 12h00
-
-Le Vendredi : 09h00 - 12h00 et 13h30 - 15h30 ",IGN & Wikipédia & Site internet de la mairie de Quérigut ,2.12004,42.68839
-"40",Rouze ,"09252",Rouzéens ,9.51,"86",9,https://upload.wikimedia.org/wikipedia/commons/thumb/9/90/Rouze_09.JPG/560px-Rouze_09.JPG,Francis Magdalou ,Non connu,"Place de la Mairie, 09460 Rouze ",04 68 20 40 39,mairie.rouze@orange.fr,Pas de site internet,"
-Le Lundi : 08h00 - 12h00
-
-Le Mercredi : 14h00 - 18h00
-
-Le Vendredi : 08h00 - 12h00 ",IGN & Wikipédia,2.0757,42.73962
-"41",Savignac-les-Ormeaux ,"09283",Savignacois ,28.31,"380",13,https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/Savignac09_mairie.JPG/560px-Savignac09_mairie.JPG,Nicolas Pech,https://www.mairie-savignac.fr/le-conseil-municipal/,"13 Place de la Mairie, 09110 Savignac-les-Ormeaux",05 61 64 22 12,contact@mairie-savignac.fr,https://www.mairie-savignac.fr/,"
-Lundi et mardi : 8h30h-12h30
-
-Mercredi : 8h30 - 12h30 et 13h30 - 17h30
-
-Jeudi : 8h30 -12h30 et 13h30 - 17h00
-
-Vendredi : 8h30 - 12h30
-",IGN & Wikipédia & Site internet de la mairie de Savignac-les-Ormeaux ,1.7738,42.6805
-"42",Senconac ,"09287",Senconacois ,4.67,"13",2.8,https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Senconac_vue1.JPG/560px-Senconac_vue1.JPG,Jean-Claude Gouze,Non connu,"Mairie, 09250 Senconac ",06 76 51 30 40,mairie.senconac@gmail.com,Pas de site internet,Le Lundi : 13h30 - 15h30 (2e et 4e lundi du mois) ,IGN & Wikipédia,1.71795,42.80997
-"43",Siguer ,"09295",Siguerois ,38.73,"96",2.5,https://upload.wikimedia.org/wikipedia/commons/1/19/Vallee_siguer.jpg,Marie-Line Caujolle,https://mairie-siguer.fr/conseil-municipal/,"Village, 09220 Siguer",05 61 05 65 45,mairie.siguer@wanadoo.fr,https://mairie-siguer.fr/,"
-Le Mardi : 9h - 12h et 14h00 - 16h30
-
-Le Jeudi : 14h - 17h",IGN & Wikipédia & Site internet de la mairie de Siguer ,1.55305,42.71769
-"44",Sorgeat ,"09298",Sorgeatois ,18.92,"81",4.3,https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Sorgeat_street.JPG/560px-Sorgeat_street.JPG,Jérôme Barre,Non connu,"Le Village, 09110 Sorgeat ",05 61 64 21 93,sorgeat.mairie@wanadoo.fr,http://www.sorgeat.fr,"
-Le Mardi : 14h00 - 18h00
-
-Le Mercredi : 09h00 - 12h00
-
-Du Jeudi au Vendredi : 14h00 - 18h00
-
-Le Samedi : 10h00 - 12h00 ",IGN & Wikipédia & Site internet de la mairie de Sorgeat ,1.8955,42.74473
-"45",Tignac ,"09311",Tignacois ,3.53,"24",6.8,https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Tignac_mairie.JPG/560px-Tignac_mairie.JPG,Joseph Ferrand,Non connu,"Le Bourg, 09110 Tignac ",05 61 64 38 39,mairie.tignac@orange.fr,Pas de site internet,Le Lundi : 09h30 - 16h00 ,IGN & Wikipédia,1.79972,42.74755
-"46",Unac ,"09318",Unaquois ,2.65,"121",46,https://api.cloudly.space/resize/clip/1900/1080/75/aHR0cHM6Ly9jbnN0bGx0bi5jb20vMTAyNHg3NjgvMTNjMGUyOWEtZTk1Yy00OTA3LTk2NDEtYjAxMDI0YWYzZGI4L3VuYWMrMi5qcGc=/image.jpg,Christophe Langlade,Non connu,"7 rue de Laudinet, 09250 Unac ",05 61 64 48 92,mairie.unac@wanadoo.fr,Pas de site internet,LeJeudi : 15h00 - 18h00 ,IGN & Wikipédia,1.78129,42.75711
-"47",Urs ,"09320",Urséens ,0.91,"31",34,https://upload.wikimedia.org/wikipedia/commons/thumb/1/15/L%27%C3%A9glise_en_hiver.jpg/560px-L%27%C3%A9glise_en_hiver.jpg,Jean Lopes-Pinto,Non connu,"Le Village, 09310 Urs",05 34 09 06 72,mairie.urs@wanadoo.fr,Pas de site internet,Le Mardi : 17h30 - 19h00 ,IGN & Wikipédia,1.73623,42.7784
-"48",Val-de-Sos ,"09334",Val-de-sossois ,53.14,"594",11,https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Vicdessos_ari%C3%A8ge.JPG/560px-Vicdessos_ari%C3%A8ge.JPG,Marie-José Dandine,https://val-de-sos.fr/fr/tb/319256/le-conseil-municipal-10,"3, Grande Rue – Vicdessos, 09220 Val-de-Sos",05 61 64 88 25,mairie@val-de-sos.fr,https://val-de-sos.fr/fr/,"
-Du Lundi au Mardi : 09h00 - 12h00
-
-Le Mercredi : 09h00 - 12h00 et 14h00 - 16h00
-
-Le Jeudi : 09h00 - 12h00
-
-Le Vendredi : 09h00 - 12h00 et 14h00 - 16h00 ",IGN & Wikipédia & Site internet de la mairie de Val-de-Sos ,1.50525,42.77509
-"49",Vaychis ,"09325",Vaychissiens ,4.49,"26",5.8,https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Vaychis_Dent_d%27Orlu.jpg/560px-Vaychis_Dent_d%27Orlu.jpg,Sylvie Dain,Non connu,"4 rue de la Fountasse, 09110 Vaychis ",05 61 64 30 84,mairie.vaychis@orange.fr,Pas de site internet,Le Mardi : 09h00 - 12h00 et 13h30 - 16h30 ,IGN & Wikipédia,1.81966,42.74523
-"50",Vèbre ,"09326",Vebrois ,5.19,"125",24,https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/V%C3%A8bre_Eglise.jpg/560px-V%C3%A8bre_Eglise.jpg,Jean Rouzoul,https://www.mairie-verdun-ariege.fr/conseil-municipal_fr.html,"Place de la Mairie, 09310 Vèbre ",05 61 64 96 10,mairie.vebre@orange.fr,Pas de site internet,Le Mercredi : 14h00 - 16h00 ,IGN & Wikipédia,1.71973,42.76752
-"51",Verdun ,"09328",Verdunois ,11.71,"219",19,https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/%C3%89glise_de_Verdun_%2809%29.jpg/560px-%C3%89glise_de_Verdun_%2809%29.jpg,Alain Miquel,Non connu,"25 route des Côtes, 09310 Verdun",05 61 64 96 43,verdun.mairie@free.fr,https://www.mairie-verdun-ariege.fr/,"
-Le Lundi : 15h00 - 19h00
-
-Le Mercredi : 10h00 - 12h00
-
-Le Vendredi : 10h00 - 12h00 ",IGN & Wikipédia & Site internet de la mairie de Verdun ,1.68857,42.80393
-"52",Vernaux ,"09330",Vernausiens ,6.06,"28",4.6,https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Vernaux_%28Ari%C3%A8ge%29.jpg/560px-Vernaux_%28Ari%C3%A8ge%29.jpg,Maxime Martuchou,Non connu,"Rue de la Mairie, 09250 Vernaux ",05 61 64 48 57,vernaux.mairie@wanadoo.fr,Pas de site internet,"
-Le Lundi : 09h00 - 16h30
-
-Du Mardi au Mercredi : 09h00 - 12h00 ",IGN & Wikipédia,1.79103,42.79064
+id,nom,code_insee,gentile,superficie_km,pop_2018,densite_hab_km
+1,Luzenac,9176,Luzenacois ,26.43,530,20
+2,Albiès ,9004,Albiésois ,7.69,122,16
+3,Appy ,9012,Pynarols ,6.1,26,4.3
+4,Artigues ,9020,Artiguais ,12.43,49,3.9
+5,Ascou ,9023,Ascounais ,35.59,120,3.4
+6,Aston ,9024,Astonnais ,153.8,214,1.4
+7,Aulos-Sinsat ,9296,Aulosois-Sinsatois ,5.05,159,31
+8,Auzat ,9030,Auzatois ,162.74,481,3
+9,Axiat ,9031,Axiatois ,9.54,41,4.3
+10,Ax-les-Thermes ,9032,Axéens ,30.26,1277,42
+11,Bestiac ,9053,Bestiacois ,6.57,20,3
+12,Bouan ,9064,Bouannais ,3.44,39,11
+13,Les Cabannes ,9070,Cabannais ,0.87,335,385
+14,Carcanières ,9078,Carcanièrois ,6.5,75,12
+15,Caussou ,9087,Caussounais ,15.83,48,3
+16,Caychax ,9088,Caychatois ,5.66,15,2.7
+17,Château-Verdun ,9096,Castelverdunois ,0.79,43,54
+18,Garanou ,9131,Garnouais ,3.01,153,51
+19,Gestiès ,9134,Gestiérois ,27.46,31,1.1
+20,L'Hospitalet-près-l'Andorre ,9139,Espitalois ,26.12,100,3.8
+21,Ignaux ,9140,Ignaous ,5.49,116,21
+22,Illier-et-Laramade ,9143,Illiermadois ,5.02,29,5.8
+23,Larcat ,9155,Larcatois ,9.31,46,4.9
+24,Larnat ,9156,Larnatois ,5.6,20,3.6
+25,Lassur ,9159,Lassuréens ,11.99,92,7.7
+26,Lercoul ,9162,Lercolois ,19.01,19,1
+27,Lordat ,9171,Lordatois ,7.37,69,9.4
+28,Mérens-les-Vals ,9189,Merengois ,80.12,168,2.1
+29,Mijanès ,9193,Mijanésiens ,39.95,60,1.5
+30,Montaillou ,9197,Montallionois ,8.61,17,2
+31,Orgeix ,9218,Orgeixois ,18.39,88,4.8
+32,Orlu ,9220,Orluséens ,70.79,164,2.3
+33,Orus ,9222,Orusiens ,9.12,26,2.9
+34,Pech ,9226,Péchois ,4.81,37,7.7
+35,Perles-et-Castelet ,9228,Perlois ,17.77,223,13
+36,Le Pla ,9230,Pléens ,12.97,58,4.5
+37,Prades ,9232,Pradéens ,28.97,32,1.1
+38,Le Puch ,9237,Puchéens ,2.89,29,10
+39,Quérigut ,9239,Quérigutéens ,36.4,133,3.7
+40,Rouze ,9252,Rouzéens ,9.51,86,9
+41,Savignac-les-Ormeaux ,9283,Savignacois ,28.31,380,13
+42,Senconac ,9287,Senconacois ,4.67,13,2.8
+43,Siguer ,9295,Siguerois ,38.73,96,2.5
+44,Sorgeat ,9298,Sorgeatois ,18.92,81,4.3
+45,Tignac ,9311,Tignacois ,3.53,24,6.8
+46,Unac ,9318,Unaquois ,2.65,121,46
+47,Urs ,9320,Urséens ,0.91,31,34
+48,Val-de-Sos ,9334,Val-de-sossois ,53.14,594,11
+49,Vaychis ,9325,Vaychissiens ,4.49,26,5.8
+50,Vèbre ,9326,Vebrois ,5.19,125,24
+51,Verdun ,9328,Verdunois ,11.71,219,19
+52,Vernaux ,9330,Vernausiens ,6.06,28,4.6
