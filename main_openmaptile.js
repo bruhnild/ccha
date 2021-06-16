@@ -37,6 +37,8 @@ function addSources() {
     url: "https://openmaptiles.geo.data.gouv.fr/data/decoupage-administratif.json"
   });
 
+
+
 }
 
 function loadImages() {
@@ -232,7 +234,8 @@ function addLayers() {
   map.addLayer({
     id: "Communes_selected",
     type: "fill",
-    source: "ccha_geom",
+    source: "etalab_contours_admin",
+    "source-layer": "communes",
     paint: {
       "fill-color": "rgba( 253, 241, 100, 0.70 )"
     },
@@ -267,15 +270,14 @@ function addLayers() {
   // feature state for the feature under the mouse.
   map.on("mousemove", "Communes_etalab", function(e) {
     var features = map.queryRenderedFeatures(e.point);
-    if (e.features.length > 0 
-      && features[0].properties 
-      && features[0].properties.nom 
-      && hoveredStateNom !== features[0].properties.nom)  
-    {
+    if (e.features.length > 0 &&
+      features[0].properties &&
+      features[0].properties.nom &&
+      hoveredStateNom !== features[0].properties.nom) {
       hoveredStateNom = features[0].properties.nom
       map.setFilter('Communes hover', ["==", "nom", hoveredStateNom]);
     }
-   
+
     const pd = document.getElementById('pd');
     pd.innerHTML =
       '<br>' + '<h2><b><div style="text-align: center;">' + e.features[0].properties.nom + '</b></h2>'
@@ -290,7 +292,7 @@ function addLayers() {
   map.on("mouseleave", "Communes hover", function() {
 
     hoveredStateNom = ""
-      map.setFilter('Communes hover', ["==", "nom", hoveredStateNom]);
+    map.setFilter('Communes hover', ["==", "nom", hoveredStateNom]);
     const pd = document.getElementById('pd');
     pd.innerHTML =
       '<h2><b>Explorer la Communauté de Communes de Haute Ariège</b></h2>'
