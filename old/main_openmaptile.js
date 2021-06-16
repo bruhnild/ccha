@@ -15,7 +15,7 @@ var hoveredStateNom = "";
 
 map.on('load', function() {
   addSources();
-  loadImages();
+  addLayers();
 });
 
 
@@ -38,21 +38,8 @@ function addSources() {
   });
 
 
-
 }
 
-function loadImages() {
-  var total = 2;
-  var currenti = 0;
-
-  map.loadImage('https://static.thenounproject.com/png/462-200.png', function(error, image) {
-    if (error) {
-      console.log("tro", error)
-    };
-    map.addImage('Map-marker-02', image);
-    addLayers()
-  })
-}
 
 
 
@@ -149,7 +136,7 @@ function addLayers() {
   });
 
   map.addLayer({
-    id: "Communes contours etalab",
+    id: "Communes_contours_etalab",
     type: "line",
     source: "etalab_contours_admin",
     "source-layer": "communes",
@@ -216,7 +203,7 @@ function addLayers() {
 
 
   map.addLayer({
-    id: "Communes hover",
+    id: "Communes_hover",
     type: "fill",
     source: "etalab_contours_admin",
     "source-layer": "communes",
@@ -245,7 +232,7 @@ function addLayers() {
 
   map.addLayer({
 
-    "id": "Commune etiquettes",
+    "id": "Commune_etiquettes",
     "type": "symbol",
     "source": "ccha_geom_centroid",
     "layout": {
@@ -275,7 +262,7 @@ function addLayers() {
       features[0].properties.nom &&
       hoveredStateNom !== features[0].properties.nom) {
       hoveredStateNom = features[0].properties.nom
-      map.setFilter('Communes hover', ["==", "nom", hoveredStateNom]);
+      map.setFilter('Communes_hover', ["==", "nom", hoveredStateNom]);
     }
 
     const pd = document.getElementById('pd');
@@ -289,10 +276,10 @@ function addLayers() {
 
   // When the mouse leaves the state-fill layer, update the feature state of the
   // previously hovered feature.
-  map.on("mouseleave", "Communes hover", function() {
+  map.on("mouseleave", "Communes_hover", function() {
 
     hoveredStateNom = ""
-    map.setFilter('Communes hover', ["==", "nom", hoveredStateNom]);
+    map.setFilter('Communes_hover', ["==", "nom", hoveredStateNom]);
     const pd = document.getElementById('pd');
     pd.innerHTML =
       '<h2><b>Explorer la Communauté de Communes de Haute Ariège</b></h2>'
@@ -370,7 +357,7 @@ function addLayers() {
 
 
   // Centrer la carte sur les coordonnées des couches 
-  map.on('click', 'Commune etiquettes', function(e) {
+  map.on('click', 'Commune_etiquettes', function(e) {
     map.flyTo({
       center: e.features[0].geometry.coordinates
     });
