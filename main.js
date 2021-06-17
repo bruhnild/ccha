@@ -13,6 +13,7 @@ var map = new mapboxgl.Map({
   bearing: 0, // Rotation
   minZoom: 9, // Zoom min
   transformRequest: transformRequest,
+
 });
 
 var hoveredStateNom = "";
@@ -30,11 +31,12 @@ function addSources() {
     promoteId: "code",
   });
 
-  map.addSource("ccha_geom_centroid", {
-    type: "geojson",
-    data: "https://raw.githubusercontent.com/bruhnild/ccha/main/data/ccha_geom_centroid.geojson",
-  });
 
+  // Ajout de la source
+  map.addSource('bright', {
+    type: 'vector',
+    url: 'https://openmaptiles.geo.data.gouv.fr/styles/osm-bright/style.json'
+  });
 
 }
 
@@ -243,26 +245,38 @@ function addLayers() {
   });
 
 
-  map.addLayer({
 
+  map.addLayer({
     "id": "Commune_etiquettes",
     "type": "symbol",
-    "source": "ccha_geom_centroid",
+    "metadata": {
+      "mapbox:group": "1444849242106.713"
+    },
+    "source": "openmaptiles",
+    "source-layer": "place",
+    "filter": 
+      ["==", "class", "village"]
+   ,
     "layout": {
-
-
-      "text-field": ['get', 'nom'],
-      "text-size": 13,
-      "text-offset": [0, 2.7],
-      "text-font": ["Arial Unicode MS Regular"]
+      "text-field": "{name:latin}\n{name:nonlatin}",
+      "text-font": ["Noto Sans Regular"],
+      "text-anchor": "top",
+      "text-max-width": 8,
+      "text-size": {
+        "base": 1.2,
+        "stops": [
+          [10, 12],
+          [15, 22]
+        ]
+      },
+      "visibility": "visible"
     },
     "paint": {
       "text-color": "hsl(200, 67%, 34%)",
-      "text-halo-color": "hsl(0, 0%, 96%)",
-      "text-halo-width": 3
+      "text-halo-color": "rgba(255,255,255,0.8)",
+      "text-halo-width": 1.2
     }
   });
-
 
   //Interactivité HOVER
   // When the user moves their mouse over the state-fill layer, we'll update the
@@ -313,14 +327,14 @@ function addLayers() {
   };
 
   map.on('click', 'Communes_etalab', function(e) {
- map.getCanvas().style.cursor = "pointer";
-    var district = map.queryRenderedFeatures(e.point, {
+    map.getCanvas().style.cursor = "pointer";
+    var communes = map.queryRenderedFeatures(e.point, {
       layers: ["Communes_etalab"],
     });
 
-    var props = district[0].properties;
+    var props = communes[0].properties;
 
-    var state = district[0].state;
+    var state = communes[0].state;
 
     new mapboxgl.Popup({
         offset: popupOffsets,
@@ -352,9 +366,17 @@ function addLayers() {
 
   // update filter to highlight clicked layer
   map.on('click', 'Communes_etalab', function(e) {
-     map.getCanvas().style.cursor = "pointer";
-    var features = map.queryRenderedFeatures(e.point);
-    map.setFilter('Communes_selected', ["==", "nom", features[0].properties.nom]);
+    map.getCanvas().style.cursor = "pointer";
+
+    var communes = map.queryRenderedFeatures(e.point, {
+      layers: ["Communes_etalab"],
+    });
+
+    var props = communes[0].properties;
+
+    var state = communes[0].state;
+    
+    map.setFilter('Communes_selected', ["==", "nom", communes[0].properties.nom]);
   });
 
 
@@ -383,7 +405,7 @@ function addLayers() {
     });
   });
 
- 
+
 }
 
 function transformRequest(url, resourceType) {
@@ -392,8 +414,7 @@ function transformRequest(url, resourceType) {
     url.slice(10, 26) === "tiles.mapbox.com";
   return {
     url: isMapboxRequest ?
-      url.replace("?", "?pluginName=dataJoins&") :
-      url,
+      url.replace("?", "?pluginName=dataJoins&") : url,
   };
 }
 
