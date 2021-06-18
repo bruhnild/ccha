@@ -254,13 +254,74 @@ function addLayers() {
     },
     "source": "openmaptiles",
     "source-layer": "place",
-    "filter": 
-      ["==", "class", "village"]
-   ,
+
+    filter: [
+      "all", ["all", 
+      ["in", "name:latin",
+       'Luzenac',
+'Albiès' ,
+'Appy' ,
+'Artigues' ,
+'Ascou' ,
+'Aston' ,
+'Aulos' ,
+'Auzat' ,
+'Axiat' ,
+'Ax-les-Thermes' ,
+'Bestiac' ,
+'Bouan' ,
+'Les Cabannes' ,
+'Carcanières' ,
+'Caussou' ,
+'Caychax' ,
+'Château-Verdun' ,
+'Garanou' ,
+'Gestiès' ,
+'L\'Hospitalet-près-l\'Andorre' ,
+'Ignaux' ,
+'Illier-et-Laramade' ,
+'Larcat' ,
+'Larnat' ,
+'Lassur' ,
+'Lercoul' ,
+'Lordat' ,
+'Mérens-les-Vals' ,
+'Mijanès' ,
+'Montaillou' ,
+'Orgeix' ,
+'Orlu' ,
+'Orus' ,
+'Pech' ,
+'Perles-et-Castelet' ,
+'Le Pla' ,
+'Prades' ,
+'Le Puch' ,
+'Quérigut' ,
+'Rouze' ,
+'Savignac-les-Ormeaux' ,
+'Senconac' ,
+'Siguer' ,
+'Sinsat',
+'Sorgeat' ,
+'Tignac' ,
+'Unac' ,
+'Urs' ,
+'Val-de-Sos' ,
+'Vaychis' ,
+'Vèbre' ,
+'Verdun' ,
+'Vernaux' 
+      ]],
+     ["==", "class", "village"],
+    ],
+
+    // filter: 
+    
+    //  ["==", "class", "village"]
+    // ,
     "layout": {
       "text-field": "{name:latin}\n{name:nonlatin}",
-      "text-font": ["Noto Sans Regular"],
-      "text-anchor": "top",
+      "text-font": ["Noto Sans Bold"],
       "text-max-width": 8,
       "text-size": {
         "base": 1.2,
@@ -375,7 +436,7 @@ function addLayers() {
     var props = communes[0].properties;
 
     var state = communes[0].state;
-    
+
     map.setFilter('Communes_selected', ["==", "nom", communes[0].properties.nom]);
   });
 
