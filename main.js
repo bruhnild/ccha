@@ -309,10 +309,15 @@ function addLayers() {
         'Vaychis',
         'Vèbre',
         'Verdun',
-        'Vernaux'
+        'Vernaux',
+        'Vicdessos'
       ]],
-      ["==", "class", "village"],
+         ["all", ["in", "class",
+        'village',
+        'hamlet'
+      ]]
     ],
+    // "minzoom":10,
     "layout": {
       "text-field": "{name:latin}\n{name:nonlatin}",
       "text-font": ["Noto Sans Bold"],
@@ -340,10 +345,10 @@ function addLayers() {
     var features = map.queryRenderedFeatures(e.point);
     if (e.features.length > 0 &&
       features[0].properties &&
-      features[0].properties.nom &&
-      hoveredStateNom !== features[0].properties.nom) {
-      hoveredStateNom = features[0].properties.nom
-      map.setFilter('Communes_hover', ["==", "nom", hoveredStateNom]);
+      features[0].properties.code &&
+      hoveredStateNom !== features[0].properties.code) {
+      hoveredStateNom = features[0].properties.code
+      map.setFilter('Communes_hover', ["==", "code", hoveredStateNom]);
     }
 
     const pd = document.getElementById('pd');
@@ -431,7 +436,7 @@ function addLayers() {
 
     var state = communes[0].state;
 
-    map.setFilter('Communes_selected', ["==", "nom", communes[0].properties.nom]);
+    map.setFilter('Communes_selected', ["==", "code", communes[0].properties.code]);
   });
 
 
