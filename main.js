@@ -6,7 +6,7 @@ const csvPromise = papaPromise(csvUrl);
 
 var map = new mapboxgl.Map({
   container: "map",
-  style: "https://openmaptiles.geo.data.gouv.fr/styles/osm-bright/style.json", //Fond de carte
+  style: "https://dev2-makinamaps.makina-corpus.net/styles/bright/style.json", //Fond de carte
   zoom: 10.3, // Zoom
   center: [1.757, 42.7105], // Centrage
   pitch: 10, // Inclinaison
@@ -25,17 +25,10 @@ map.on('load', function() {
 
 function addSources() {
 
-  map.addSource("etalab_contours_admin", {
+  map.addSource("makinamaps", {
     type: "vector",
-    url: "https://openmaptiles.geo.data.gouv.fr/data/decoupage-administratif.json",
-    promoteId: "code",
-  });
-
-
-  // Ajout de la source
-  map.addSource('bright', {
-    type: 'vector',
-    url: 'https://openmaptiles.geo.data.gouv.fr/styles/osm-bright/style.json'
+    url: "https://dev2-makinamaps.makina-corpus.net/data/v3.json",
+    promoteId: "ref"
   });
 
 }
@@ -43,23 +36,14 @@ function addSources() {
 
 function addLayers() {
 
-  var layers = map.getStyle().layers;
-
-  var labelLayerId;
-  for (var i = 0; i < layers.length; i++) {
-    if (layers[i].type === 'symbol' && layers[i].layout['text-field']) {
-      labelLayerId = layers[i].id;
-      break;
-    }
-  }
 
   csvPromise.then(function(results) {
     console.log(results.data);
     results.data.forEach((row) => {
       map.setFeatureState({
           //YOUR TURN: Replace with your source tileset and source layer
-          source: "etalab_contours_admin",
-          sourceLayer: "communes",
+          source: "makinamaps",
+          sourceLayer: "boundary_polygon",
           //YOUR TURN: Replace with unqiue ID row name
           id: row.code_insee,
         },
@@ -88,14 +72,12 @@ function addLayers() {
 
 
   map.addLayer({
-    id: "Communes_etalab",
-    type: "fill",
-    source: "etalab_contours_admin",
-    "source-layer": "communes",
-    paint: {
-      "fill-color": "hsla(208, 72%, 54%, 0.05)"
-    },
-    "filter": ["all", ["in", "code",
+    "id": "boundary_fill",
+    "type": "fill",
+    "source": "makinamaps",
+    "source-layer": "boundary_polygon",
+
+    "filter": ["all", ["in", "ref",
       '09176',
       '09004',
       '09012',
@@ -148,20 +130,24 @@ function addLayers() {
       '09326',
       '09328',
       '09330'
-    ]]
+    ]],
+    "paint": {
+      "fill-color": "hsla(208, 72%, 54%, 0.05)"
+    }
   });
 
 
   map.addLayer({
-    id: "Communes_contours_etalab",
-    type: "line",
-    source: "etalab_contours_admin",
-    "source-layer": "communes",
-    paint: {
+    "id": "boundary_border",
+    "type": "line",
+    "source": "openmaptiles",
+    "source-layer": "boundary_polygon",
+
+    "paint": {
       "line-color": "hsl(200, 67%, 34%)",
       "line-width": 1
     },
-    "filter": ["all", ["in", "code",
+    "filter": ["all", ["in", "ref",
       '09176',
       '09004',
       '09012',
@@ -218,152 +204,144 @@ function addLayers() {
   });
 
   map.addLayer({
-    id: "Communes_hover",
-    type: "fill",
-    source: "etalab_contours_admin",
-    "source-layer": "communes",
+    "id": "boundary_fill_hover",
+    "type": "fill",
+    "source": "openmaptiles",
+    "source-layer": "boundary_polygon",
     "layout": {},
     "paint": {
       "fill-color": "#358FDE",
       "fill-opacity": 0.5
 
     },
-    filter: ["==", "nom", hoveredStateNom]
+    "filter": ["==", "name", hoveredStateNom]
   });
 
 
 
   map.addLayer({
-    id: "Communes_selected",
-    type: "fill",
-    source: "etalab_contours_admin",
-    "source-layer": "communes",
-    paint: {
+    "id": "boundary_fill_selected",
+    "type": "fill",
+    "source": "openmaptiles",
+    "source-layer": "boundary_polygon",
+    "paint": {
       "fill-color": "rgba( 253, 241, 100, 0.70 )"
     },
-    filter: ["==", "nom", ""]
+    "filter": ["==", "name", ""]
   });
 
-
-
   map.addLayer({
-    "id": "Commune_etiquettes",
+    "id": "boundary_label",
     "type": "symbol",
-    "metadata": {
-      "mapbox:group": "1444849242106.713"
-    },
     "source": "openmaptiles",
-    "source-layer": "place",
+    "source-layer": "boundary_label",
 
-    filter: [
-      "all", ["all", ["in", "name:latin",
-        'Luzenac',
-        'Albiès',
-        'Appy',
-        'Artigues',
-        'Ascou',
-        'Aston',
-        'Aulos',
-        'Auzat',
-        'Axiat',
-        'Ax-les-Thermes',
-        'Bestiac',
-        'Bouan',
-        'Les Cabannes',
-        'Carcanières',
-        'Caussou',
-        'Caychax',
-        'Château-Verdun',
-        'Garanou',
-        'Gestiès',
-        'L\'Hospitalet-près-l\'Andorre',
-        'Ignaux',
-        'Illier-et-Laramade',
-        'Larcat',
-        'Larnat',
-        'Lassur',
-        'Lercoul',
-        'Lordat',
-        'Mérens-les-Vals',
-        'Mijanès',
-        'Montaillou',
-        'Orgeix',
-        'Orlu',
-        'Orus',
-        'Pech',
-        'Perles-et-Castelet',
-        'Le Pla',
-        'Prades',
-        'Le Puch',
-        'Quérigut',
-        'Rouze',
-        'Savignac-les-Ormeaux',
-        'Senconac',
-        'Siguer',
-        'Sinsat',
-        'Sorgeat',
-        'Tignac',
-        'Unac',
-        'Urs',
-        'Val-de-Sos',
-        'Vaychis',
-        'Vèbre',
-        'Verdun',
-        'Vernaux',
-        'Vicdessos'
-      ]],
-         ["all", ["in", "class",
-        'village',
-        'hamlet'
-      ]]
-    ],
-    // "minzoom":10,
+    "filter": ["all", ["in", "ref",
+      '09176',
+      '09004',
+      '09012',
+      '09020',
+      '09023',
+      '09024',
+      '09296',
+      '09030',
+      '09031',
+      '09032',
+      '09053',
+      '09064',
+      '09070',
+      '09078',
+      '09087',
+      '09088',
+      '09096',
+      '09131',
+      '09134',
+      '09139',
+      '09140',
+      '09143',
+      '09155',
+      '09156',
+      '09159',
+      '09162',
+      '09171',
+      '09189',
+      '09193',
+      '09197',
+      '09218',
+      '09220',
+      '09222',
+      '09226',
+      '09228',
+      '09230',
+      '09232',
+      '09237',
+      '09239',
+      '09252',
+      '09283',
+      '09287',
+      '09295',
+      '09298',
+      '09311',
+      '09318',
+      '09320',
+      '09334',
+      '09325',
+      '09326',
+      '09328',
+      '09330'
+    ]],
+
     "layout": {
-      "text-field": "{name:latin}\n{name:nonlatin}",
-      "text-font": ["Noto Sans Bold"],
+      "text-field": "{name}",
+      "text-font": ["Noto Sans Regular"],
       "text-max-width": 8,
       "text-size": {
         "base": 1.2,
         "stops": [
-          [10, 12],
-          [15, 22]
+          [7, 14],
+          [11, 16]
         ]
-      },
-      "visibility": "visible"
+      }
     },
     "paint": {
       "text-color": "hsl(200, 67%, 34%)",
       "text-halo-color": "rgba(255,255,255,0.8)",
       "text-halo-width": 1.2
     }
+
   });
+
+  if (map.getLayer('place-village')) map.removeLayer('place-village');
+  if (map.getLayer('place-town')) map.removeLayer('place-town');
+  if (map.getLayer('place-city')) map.removeLayer('place-city');
+  if (map.getLayer('place-city-capital')) map.removeLayer('place-city-capital');
 
   //Interactivité HOVER
   // When the user moves their mouse over the state-fill layer, we'll update the
   // feature state for the feature under the mouse.
-  map.on("mousemove", "Communes_etalab", function(e) {
+  map.on("mousemove", "boundary_fill", function(e) {
     var features = map.queryRenderedFeatures(e.point);
     if (e.features.length > 0 &&
       features[0].properties &&
-      features[0].properties.code &&
-      hoveredStateNom !== features[0].properties.code) {
-      hoveredStateNom = features[0].properties.code
-      map.setFilter('Communes_hover', ["==", "code", hoveredStateNom]);
+      features[0].properties.ref &&
+      hoveredStateNom !== features[0].properties.ref) {
+      hoveredStateNom = features[0].properties.ref
+      map.setFilter('boundary_fill_hover', ["==", "ref", hoveredStateNom]);
     }
 
     const pd = document.getElementById('pd');
     pd.innerHTML =
-      '<br>' + '<h2><b><div style="text-align: center;">' + e.features[0].properties.nom + '</b></h2>'
+      '<br>' + '<h2><b><div style="text-align: center;">' + e.features[0].properties.name + '</b></h2>'
 
 
   });
 
   // When the mouse leaves the state-fill layer, update the feature state of the
   // previously hovered feature.
-  map.on("mouseleave", "Communes_hover", function() {
+  map.on("mouseleave", "boundary_fill_hover", function() {
 
     hoveredStateNom = ""
-    map.setFilter('Communes_hover', ["==", "nom", hoveredStateNom]);
+    map.setFilter('boundary_fill_hover', ["==", "name", hoveredStateNom]);
     const pd = document.getElementById('pd');
     pd.innerHTML =
       '<h2><b>Explorer la Communauté de Communes de Haute Ariège</b></h2>'
@@ -386,10 +364,10 @@ function addLayers() {
     'right': [-markerRadius, (markerHeight - markerRadius) * -1]
   };
 
-  map.on('click', 'Communes_etalab', function(e) {
+  map.on('click', 'boundary_fill', function(e) {
     map.getCanvas().style.cursor = "pointer";
     var communes = map.queryRenderedFeatures(e.point, {
-      layers: ["Communes_etalab"],
+      layers: ["boundary_fill"],
     });
 
     var props = communes[0].properties;
@@ -425,41 +403,41 @@ function addLayers() {
   });
 
   // update filter to highlight clicked layer
-  map.on('click', 'Communes_etalab', function(e) {
+  map.on('click', 'boundary_fill', function(e) {
     map.getCanvas().style.cursor = "pointer";
 
     var communes = map.queryRenderedFeatures(e.point, {
-      layers: ["Communes_etalab"],
+      layers: ["boundary_fill"],
     });
 
     var props = communes[0].properties;
 
     var state = communes[0].state;
 
-    map.setFilter('Communes_selected', ["==", "code", communes[0].properties.code]);
+    map.setFilter('boundary_fill_selected', ["==", "ref", communes[0].properties.ref]);
   });
 
 
   map.on('mousemove', function(e) {
     var features = map.queryRenderedFeatures(e.point, {
-      layers: ['Communes_etalab']
+      layers: ['boundary_fill']
     });
     map.getCanvas().style.cursor = (features.length) ? 'pointer' : '';
   });
 
 
-  map.on('mouseenter', 'Communes_etalab', function() {
+  map.on('mouseenter', 'boundary_fill', function() {
     map.getCanvas().style.cursor = 'pointer';
   });
 
   // Change it back to a pointer when it leaves.
-  map.on('mouseleave', 'Communes_etalab', function() {
+  map.on('mouseleave', 'boundary_fill', function() {
     map.getCanvas().style.cursor = '';
   });
 
 
   // Centrer la carte sur les coordonnées des couches 
-  map.on('click', 'Commune_etiquettes', function(e) {
+  map.on('click', 'boundary_label', function(e) {
     map.flyTo({
       center: e.features[0].geometry.coordinates
     });
