@@ -27,7 +27,7 @@ function addSources() {
 
   map.addSource("makinamaps", {
     type: "vector",
-    url: "https://dev2-makinamaps.makina-corpus.net/data/v3.json",
+    url: "https://makinamaps.makina-corpus.net/data/v3.json",
     promoteId: "ref"
   });
 
@@ -475,3 +475,9 @@ map.addControl(new mapboxgl.NavigationControl({
 map.addControl(new mapboxgl.ScaleControl({
   position: "bottom-right"
 }));
+
+document.getElementById('filter-input').addEventListener('click', function () 
+{ map.flyTo({
+ pitch: 0,  center: [4.670, 46.184], // starting position
+    zoom: 6 });
+});
