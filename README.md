@@ -1,4 +1,5 @@
-# Méthodologie de création de la carte dynamique de la Communauté de Communes de la Haute Ariège
+# Méthodologie de création de la carte dynamique
+Lien démo : https://ccha.netlify.app/
 ![ ](ccha.png  "CCHA")
 ## 1. Création du CSV
 
@@ -17,17 +18,7 @@ Les informations renseignées pour chaque commune dans le CSV sont les suivantes
 - Site Internet (site internet si existant ou [Annuaire service publique](https://lannuaire.service-public.fr/occitanie/ariege/))
 - Horaires d’ouverture (site internet si existant ou [Annuaire service publique](https://lannuaire.service-public.fr/occitanie/ariege/))
 
-## 2. Import du CSV en base de données PostGIS
-
-Import du CSV dans PostGIS pour créer la table attributaire de la CCHA.
-
-## 3. Jointure avec les contours de communes
-
-Création de la requête SQL pour joindre la table attributaire de la CCHA avec le référentiel géographique des communes de l'IGN Admin Express 2021.
-
-## 4. Création de la carte dynamique avec Maplibre
-
-Lien netlify : https://ccha.netlify.app/
+## 2. Création de la carte dynamique avec Maplibre
 
 - Les contours et labels de communes proviennent de [Makina Maps](https://makinamaps.makina-corpus.net/)
 
@@ -40,8 +31,4 @@ Lien netlify : https://ccha.netlify.app/
 - https://github.com/mapbox/impact-tools/blob/master/data-joins/index.html
 
 
-## Cartes intermédiaires
-
-- ccha/old/index.html
-- ccha/old/index_openmaptile_v1.html
-- ccha/old/index_openmaptile_v2.html
+**Dépot Github** : https://github.com/bruhnild/ccha
